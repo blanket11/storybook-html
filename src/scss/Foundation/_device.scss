@@ -1,0 +1,54 @@
+@use "../setting";
+
+$breakpointPc: 1000px;
+$breakpostMoblie: 768px;
+
+@mixin screen($resMin, $resMax) {
+  @media screen and (min-width: $resMin) and (max-width: $resMax) {
+    @content;
+  }
+}
+
+@mixin max-screen($res) {
+  @media screen and (max-width: $res) {
+    @content;
+  }
+}
+
+@mixin min-screen($res) {
+  @media screen and (min-width: $res) {
+    @content;
+  }
+}
+
+@mixin screen-height($resMin, $resMax) {
+  @media screen and (min-height: $resMin) and (max-height: $resMax) {
+    @content;
+  }
+}
+
+@mixin max-screen-height($res) {
+  @media screen and (max-height: $res) {
+    @content;
+  }
+}
+
+@mixin min-screen-height($res) {
+  @media screen and (min-height: $res) {
+    @content;
+  }
+}
+
+// media
+
+@mixin mobile() {
+  @include min-screen($breakpostMoblie) {
+    @content;
+  }
+}
+
+@mixin pc() {
+  @include max-screen($breakpostMoblie + 1) {
+    @content;
+  }
+}

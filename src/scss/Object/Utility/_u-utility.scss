@@ -1,0 +1,17 @@
+@use "../../Foundation/device";
+
+.u-hidden-pc {
+  display: none;
+
+  @include device.pc {
+    display: block;
+  }
+}
+
+
+.u-hiddne-sp {
+  display: none;
+  @include device.mobile {
+    display: block;
+  }
+}
