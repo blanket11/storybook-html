@@ -3,6 +3,7 @@ const Fiber = require('fibers'); //高速化
 
 module.exports = {
   stories: ['../stories/**/*.stories.js'],
+  addons: ['@storybook/addon-viewport/register'],
 
   webpackFinal: async (config) => {
 
